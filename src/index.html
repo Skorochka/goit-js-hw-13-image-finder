@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../node_modules/@pnotify/core/dist/PNotify.css" rel="stylesheet" type="text/css" />
+    <link href="../node_modules/@pnotify/mobile/dist/PNotifyMobile.css" rel="stylesheet" type="text/css" />
+
+    
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
@@ -13,12 +17,16 @@
 <main>
     <div class="conteiner">
         <form class="search-form" id="search-form">
-            <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+            <input class="input" type="text" name="query" autocomplete="off" placeholder="Search images..." />
         </form>
         <ul class="list gallery">
             <!-- Список <li> с карточками изображений -->
         </ul>
         <button class="load-more-btn">Load more</button>
+    </div>
+    <div class="largeImage-conteiner">
+        <button class="close-btn">X</button>
+        <img width="1000" class="largeImage-img" src="" alt="">
     </div>
 </main>
 
