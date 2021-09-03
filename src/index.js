@@ -39,6 +39,14 @@ function renderCollection() {
     fetchImg(searchQuery).then(data => {
         incrementPage()
         appendMarkup(data)
+        
+    }).then(() => {
+        const numberOfItem = ((page - 1) * 12) - 1
+    
+        refs.gallery.children[numberOfItem].scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+      });
     }).catch(err => {
       error({ text: err })
     })
@@ -58,6 +66,7 @@ function appendMarkup(data) {
 
 function onLoadMoreBtnClick() {
     renderCollection()
+    
     }
 
 function clearGallery() {
